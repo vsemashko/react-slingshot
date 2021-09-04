@@ -14,7 +14,7 @@ jobs:
           key: "npm-packages"
           paths: 
             - ./node_modules
-      - run: npm lint
+      - run: npm run lint
   test:
     docker: 
       - image: circleci/node:13.8.0
@@ -23,7 +23,7 @@ jobs:
       - restore_cache:
           keys:
             - "npm-packages"
-      - run: npm test
+      - run: npm run test
   analyze:
     docker: 
       - image: circleci/node:13.8.0
